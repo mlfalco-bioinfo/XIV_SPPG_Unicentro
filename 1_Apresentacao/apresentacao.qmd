@@ -1,0 +1,125 @@
+---
+title: "Análise de Dados Genômicos sem Código"
+subtitle: "Uma Introdução com Galaxy e Orange"
+author: "Seu Nome"
+format: 
+  revealjs:
+    theme: sky
+    transition: slide
+    footer: "Minicurso de Bioinformática Visual"
+---
+
+## Módulo 1: Boas-vindas e Fundamentos
+- **(5 min)** Boas-vindas e objetivos do minicurso
+- **(10 min)** A Caixa de Ferramentas do Bioinformata Visual
+- **(5 min)** Nosso Desafio de Hoje: O Fluxo de Trabalho
+
+---
+
+## O "Google" da Biologia
+::: {.columns}
+::: {.column width="60%"}
+### NCBI (National Center for Biotechnology Information)
+- A maior biblioteca pública de dados biológicos do mundo.
+- Armazena genomas, sequências, artigos, etc.
+- Hoje vamos usar o **SRA (Sequence Read Archive)**, o "depósito" de dados brutos de sequenciamento.
+:::
+::: {.column width="40%"}
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/NCBI_logo.svg/1280px-NCBI_logo.svg.png)
+:::
+:::
+
+---
+
+## Nossos Laboratórios Virtuais
+::: {.columns}
+::: {.column width="50%"}
+### Galaxy
+![](https://galaxyproject.org/images/galaxy-logos/galaxy-logo.png)
+- Um "laboratório de biologia molecular" online.
+- Clicar e usar: sem linhas de código.
+- Mantém um registro de cada passo (Histórico).
+:::
+::: {.column width="50%"}
+### Orange Data Mining
+![](https://upload.wikimedia.org/wikipedia/commons/c/c2/Orange_logo.svg)
+- Uma "tela de desenho" para análise de dados.
+- Conecte blocos (widgets) para criar um fluxo.
+- Foco em visualização interativa.
+:::
+:::
+
+---
+
+## Módulo 2: Preparando o Ambiente
+- **(10 min)** Criando sua conta no Galaxy (`usegalaxy.org`)
+- **(10 min)** Instalando o Orange Data Mining
+- **(5 min)** Escolhendo seu caso de estudo!
+
+---
+
+## Escolha seu Desafio!
+::: {.incremental}
+- Você pode escolher **apenas UM** dos projetos para seguir durante a aula.
+- Ambos seguem os mesmos passos, mas com dados diferentes.
+- Os tutoriais estarão no GitHub para consulta.
+:::
+
+---
+
+## Caso 1: O Desafio do Virologista 🦠
+::: {.columns}
+::: {.column width="70%"}
+- **Missão:** Identificar mutações em uma amostra do vírus **SARS-CoV-2**.
+- **Dados:** Amostra real de um paciente.
+- **Código de Acesso (SRA):** `SRR11411039`
+:::
+::: {.column width="30%"}
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/SARS-CoV-2_without_background.png/493px-SARS-CoV-2_without_background.png)
+:::
+:::
+
+---
+
+## Caso 2: O Mistério da Planta Resistente 🌿
+::: {.columns}
+::: {.column width="70%"}
+- **Missão:** Encontrar uma mutação no cloroplasto da planta ***Arabidopsis thaliana***.
+- **Dados:** Sequenciamento do genoma do cloroplasto.
+- **Código de Acesso (SRA):** `SRR5199232`
+:::
+::: {.column width="30%"}
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Arabidopsis_thaliana_rosette.jpg/512px-Arabidopsis_thaliana_rosette.jpg)
+:::
+:::
+
+---
+
+## Módulo 3: Mão na Massa no Galaxy!
+O roteiro da nossa análise:
+1.  **Importar Dados:** Buscar os dados brutos no NCBI.
+2.  **Controle de Qualidade:** Checar a qualidade com `FastQC`.
+3.  **Limpeza:** Remover sequências ruins com `Trimmomatic`.
+4.  **Mapeamento:** Alinhar os dados limpos a uma referência com `BWA-MEM`.
+5.  **Chamada de Variantes:** Identificar as mutações com `iVar`.
+
+---
+
+## Módulo 4: Desenhando a Ciência no Orange
+- **Objetivo:** Transformar nossa tabela de variantes em gráficos interativos para encontrar os "insights" escondidos nos dados.
+
+---
+
+## O Fluxo de Trabalho no Orange
+1.  **Carregar:** Usar o widget `File` para importar o `.tsv` do Galaxy.
+2.  **Explorar:** Conectar widgets como `Data Table`, `Distributions` e `Scatter Plot`.
+3.  **Analisar:** Usar os gráficos para responder às perguntas do nosso caso de estudo.
+
+---
+
+## Módulo 5: Encerramento
+- **Revisão:** Passamos do NCBI -> Galaxy -> Orange!
+- **Recursos Adicionais:** Link para o repositório no GitHub com todos os tutoriais.
+- **Próximos Passos:** Comunidades do Galaxy e Orange, tutoriais online.
+
+**Obrigado! Dúvidas?**
