@@ -1,0 +1,22 @@
+{
+  "name": "Minicurso Bioinformática (Galaxy + Orange)",
+
+  // Configurações da construção da imagem
+  "build": {
+    "dockerfile": "../Dockerfile",
+    "context": ".."
+  },
+
+  // Configurações e extensões do VS Code
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python"
+      ]
+    }
+  },
+
+  // Comando que roda TODA VEZ que o Codespace inicia.
+  // Ele adiciona o comando para iniciar o Orange ao perfil do terminal.
+  "postStartCommand": "echo -e '\\necho \"Iniciando Orange Canvas...\"\\norange-canvas' >> ~/.bashrc"
+}
